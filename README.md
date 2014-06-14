@@ -4,7 +4,7 @@ EEGLAB plugin that filters TMS-artifacted EEG with butterworth filters and remov
 
 Dependencies
 ============
-You will need the MATLAB's Signal Processing Toolbox and Curve Fitting Toolbox.
+You will need MATLAB's Signal Processing Toolbox and Curve Fitting Toolbox.
 
 Installation
 ============
