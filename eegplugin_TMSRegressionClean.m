@@ -1,9 +1,11 @@
-function eegplugin_TMSRegressionClean(fig, try_srings, catch_strings)
+function vers = eegplugin_TMSRegressionClean(fig, try_strings, catch_strings)
 
 vers = 'TMSRegressionClean1.0';
 
 toolmenu= findobj(fig, 'tag', 'tools');
+
+cmd = [ try_strings.check_cont '[EEG LASTCOM] = pop_tmsclean(EEG);' catch_strings.new_and_hist ];
 uimenu( toolmenu, 'label', 'TMS Artifact Removal', ...
-    'callback', 'EEGnew = pop_tmsclean(EEG); [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEGnew, CURRENTSET); eeglab redraw');
+    'callback', cmd);
 
 end
